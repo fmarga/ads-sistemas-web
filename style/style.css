@@ -48,3 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 .text-title{
     font-size: 6rem;
 }
+
+.carousel-indicators {
+    bottom: -20px;
+}
+
+.carousel-indicators button {
+    background-color: #333 !important;
+}

@@ -1,145 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Darker+Grotesque:wght@300..900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Petshop da Bisteca</title>
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h1 class="header_title">Petshop da Bisteca</h1>
-            <p>O melhor para o seu pet, com selo Bisteca de qualidade!</p>
-            <nav  class="header_menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-xl bg-navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Petshop da Bisteca</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="produtos.html">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicos.html">Serviços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main>
-        <h2>Nossos Produtos</h2>
+    <main class="container py-5" style="max-width: 900px;">
 
-        <!-- CATEGORIA 1: Alimentação -->
-        <section>
-            <h3>Alimentação</h3>
+        <!-- Header -->
+        <div class="text-white text-center p-5 rounded-3 mb-5"
+            style="background: #313031;">
+            <h1 class="fw-bold">NOSSOS PRODUTOS</h1>
+            <p class="mb-0 opacity-75">O melhor para o seu pet, com selo Bisteca de qualidade</p>
+        </div>
 
-            <table border="1">
-                <tr>
-                    <th>Foto</th>
-                    <th>Produto</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/racao-premium.png" alt="Ração Premium 15kg" width="150"></td>
-                    <td>Ração Premium 15kg</td>
-                    <td>Ração premium para cães adultos de porte médio e grande. Rica em proteínas e vitaminas essenciais para a saúde do seu pet.</td>
-                    <td>R$ 189,90</td>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/petisco-natural.png" alt="Petisco Natural" width="150"></td>
-                    <td>Petisco Natural</td>
-                    <td>Petisco natural desidratado de cordeiro, sem conservantes. Ideal para treinamento e recompensas.</td>
-                    <td>R$ 29,90</td>
-                </tr>
-            </table>
-        </section>
+        <!-- ALIMENTAÇÃO -->
+        <article class="card border-0 shadow-sm mb-5">
+            <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">ALIMENTAÇÃO</h3>
+                <div id="carouselAlimentacao" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselAlimentacao" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselAlimentacao" data-bs-slide-to="1"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/racao-premium.png" alt="Ração Premium 15kg"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Ração Premium 15kg</h5>
+                                <p class="text-muted">Ração premium para cães adultos de porte médio e grande. Rica em
+                                    proteínas e vitaminas essenciais.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 189,90</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/petisco-natural.png" alt="Petisco Natural"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Petisco Natural</h5>
+                                <p class="text-muted">Petisco natural desidratado de cordeiro, sem conservantes. Ideal
+                                    para treinamento e recompensas.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlimentacao"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAlimentacao"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                </div>
+            </div>
+        </article>
 
-        <hr>
+        <!-- BRINQUEDOS -->
+        <article class="card border-0 shadow-sm mb-5">
+            <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">BRINQUEDOS</h3>
+                <div id="carouselBrinquedos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBrinquedos" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselBrinquedos" data-bs-slide-to="1"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/bola-borracha.png" alt="Bola de Borracha Resistente"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Bola de Borracha Resistente</h5>
+                                <p class="text-muted">Bola de borracha atóxica, super resistente para cães que adoram
+                                    morder. Disponível em várias cores.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 14,90</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/ratinho-pelucia.png" alt="Ratinho de Pelúcia"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Ratinho de Pelúcia</h5>
+                                <p class="text-muted">Brinquedo de pelúcia com catnip (erva do gato) para gatos.
+                                    Estimula o instinto de caça e brincadeira.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 19,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBrinquedos"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBrinquedos"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                </div>
+            </div>
+        </article>
 
-        <!-- CATEGORIA 2: Brinquedos -->
-        <section>
-            <h3>Brinquedos</h3>
+        <!-- HIGIENE E CUIDADOS -->
+        <article class="card border-0 shadow-sm mb-5">
+            <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">HIGIENE E CUIDADOS</h3>
+                <div id="carouselHigiene" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselHigiene" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselHigiene" data-bs-slide-to="1"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/shampoo-neutro.png" alt="Shampoo Neutro Pet"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Shampoo Neutro Pet</h5>
+                                <p class="text-muted">Shampoo neutro hipoalergênico para cães e gatos. Fórmula suave que
+                                    não irrita a pele sensível.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 42,90</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center p-4">
+                                <img src="src/produtos/escova-pelos.png" alt="Escova Removedora de Pelos"
+                                    class="img-fluid rounded-3 mb-3" style="max-height: 250px; object-fit: contain;">
+                                <h5 class="fw-bold">Escova Removedora de Pelos</h5>
+                                <p class="text-muted">Escova desembaraçadora com cerdas macias. Remove pelos soltos e
+                                    mantém a pelagem brilhante.</p>
+                                <span class="badge bg-success fs-6 px-3 py-2">R$ 54,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigiene"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselHigiene"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+                    </button>
+                </div>
+            </div>
+        </article>
 
-            <table border="1">
-                <tr>
-                    <th>Foto</th>
-                    <th>Produto</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/bola-borracha.png" alt="Bola de Borracha Resistente" width="150"></td>
-                    <td>Bola de Borracha Resistente</td>
-                    <td>Bola de borracha atóxica, super resistente para cães que adoram morder. Disponível em várias cores.</td>
-                    <td>R$ 14,90</td>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/ratinho-pelucia.png" alt="Ratinho de Pelúcia" width="150"></td>
-                    <td>Ratinho de Pelúcia</td>
-                    <td>Brinquedo de pelúcia com catnip (erva do gato) para gatos. Estimula o instinto de caça e brincadeira.</td>
-                    <td>R$ 19,90</td>
-                </tr>
-            </table>
-        </section>
-
-        <hr>
-
-        <!-- CATEGORIA 3: Higiene e Cuidados -->
-        <section>
-            <h3>Higiene e Cuidados</h3>
-
-            <table border="1">
-                <tr>
-                    <th>Foto</th>
-                    <th>Produto</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/shampoo-neutro.png" alt="Shampoo Neutro Pet" width="150"></td>
-                    <td>Shampoo Neutro Pet</td>
-                    <td>Shampoo neutro hipoalergênico para cães e gatos. Fórmula suave que não irrita a pele sensível.</td>
-                    <td>R$ 42,90</td>
-                </tr>
-                <tr>
-                    <td><img src="src/produtos/escova-pelos.png" alt="Escova Removedora de Pelos" width="150"></td>
-                    <td>Escova Removedora de Pelos</td>
-                    <td>Escova desembaraçadora com cerdas macias. Remove pelos soltos e mantém a pelagem brilhante.</td>
-                    <td>R$ 54,90</td>
-                </tr>
-            </table>
-        </section>
     </main>
 
-    <footer>
-        <div>
-           <div>
 
-                <div>
-                    <h3>Nossa história</h3>
-                    <p>A Bisteca sempre foi muito exigente com a qualidade de seus produtos e serviços (uma verdadeira burguesinha safada), então porque não oferecer o melhor para nossos clientes e seus pets - com selo Bisteca Furacão de qualidade.</p>
-                </div>
-
-                <div>
-                    <h3>Contato</h3>
-                    <ul>
-                        <li>-51 999999999</li>
-                        <li>-contato@bistecou.com</li>
-                        <li>Porto Alegre - RS</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Redes Sociais</h3>
-                    <ul>
-                        <li><a href="http://instagram.com" target="_blank"><img src="src/redes-sociais/instagram.svg" alt="Logo Instagram"></a></li>
-                    </ul>
-                </div>
-           </div>
+    <footer class="text-center text-muted py-3 mt-auto" style="font-size: 0.85rem;">
+        <div class="container d-flex justify-content-center gap-4 mb-1">
+            <span>(51) 99999-9999</span>
+            <span>contato@bistecou.com</span>
+            <span>Porto Alegre - RS</span>
+            <a href="http://instagram.com" target="_blank" class="text-muted">Instagram</a>
         </div>
-
-        <div>
-            <div>
-                <p>Bisteca Petshop &copy;2026 - Alguns direitos reservados</p>
-            </div>
-        </div>
+        <small>Bisteca Petshop &copy;2026 - Alguns direitos reservados</small>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
