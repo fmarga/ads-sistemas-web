@@ -21,6 +21,7 @@ header {
     z-index: 1000;
     opacity: 0.2;
     transition: opacity 0.3s ease;
+    will-change: opacity;
 }
 
 header:hover {
@@ -56,4 +57,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-indicators button {
     background-color: #333 !important;
+}
+
+.carousel-inner {
+    min-height: 450px;
 }
