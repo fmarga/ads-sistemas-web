@@ -41,6 +41,8 @@ if (formulario) {
         // Cria a mensagem de confirmação
         const mensagem = document.createElement('div');
         mensagem.className = 'text-center p-5';
+        mensagem.setAttribute('role', 'status');
+        mensagem.setAttribute('aria-live', 'polite');
         mensagem.innerHTML = `
             <h3 class="fw-bold">Agendamento confirmado!</h3>
             <p class="text-muted">Você será redirecionado para a página inicial em <span id="contador">5</span> segundos...</p>

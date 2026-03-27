@@ -19,12 +19,12 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    opacity: 0.2;
+    opacity: 0.85;
     transition: opacity 0.3s ease;
     will-change: opacity;
 }
 
-header:hover {
+header:hover, header:focus-within {
     opacity: 1;
 }
 
